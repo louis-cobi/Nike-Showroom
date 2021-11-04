@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+@import "responsive";
+@import "button";
+@import "header";
+@import "footer";
+@import "landing";
+@import "cart";
+@import "product";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.lora{
+    font-family: lora;
+}
+
+.h1-desk-ipad{
+    font-size: 64px;
+}
+
+.h1-phone{
+    font-size: 34px;
+}
+
+.h2-desk-ipad{
+    font-size: 34px;
+}
+
+.h2-iphone{
+    font-size: 22px;
+}
+
+.h3-desk-ipad{
+    font-size: 24px;
+}
+
+.h3-iphone{
+    font-size: 18px;
+}
+
+.poppins{
+    font-family: poppins;
+}
+
+.sub-phone-bold{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sub-desk-ipad-bold{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.sub-phone{
+    font-size: 14px;
+}
+
+.sub-desk-ipad{
+    font-size: 24px;
+}
+
+.paragraph{
+    font-size: 12px;
+}

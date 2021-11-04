@@ -1,0 +1,197 @@
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  width: 100vw;
+  padding: 0 8vw;
+  color: $black;
+  z-index: 999;
+  font-family: poppins;
+
+  .logo {
+    width: 24vw;
+    height: 16vh;
+    background: center / contain no-repeat url(/resources/images/NIKE.svg);
+    img {
+      margin-top: 6vh;
+      margin-left: 16%;
+      width: 6vw;
+    }
+  }
+  .logo--landing{
+      background: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    font-family: poppins;
+
+    .nav-link {
+      a {
+        margin: 0.2rem;
+        padding: 1rem 0.5rem;
+      }
+      &__hover {
+        position: relative;
+      }
+
+      &__hover::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $gradient-opaque;
+        transform-origin: center right;
+        transform: scaleX(0) translateY(-50%);
+        transition: transform 0.3s ease;
+      }
+
+      &__hover:hover {
+        color: #2c2827;
+      }
+
+      &__hover:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1) translateY(-50%);
+      }
+    }
+  }
+
+  .menu-icon {
+    position: relative;
+    padding: 26px 10px;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+
+    &__line {
+      display: block;
+      position: relative;
+      background: #2c2827;
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        background: #2c2827;
+        transition: background 0.8s ease;
+      }
+      &::before {
+        transform: translateY(-5px);
+      }
+      &::after {
+        transform: translateY(5px);
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+.main-header__landing{
+    padding: 0px 8vw;
+    position: fixed;
+}
+
+
+@media screen and (max-width: 767px) {
+  .main-header {
+    height: 8vh;
+
+    .logo {
+      background: none;
+      img {
+        width: 10vw;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 2rem 0;
+      width: 100vw;
+      height: 100vh;
+      font-size: 2rem;
+      color: #fff;
+      background: #2c2827;
+      transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+      clip-path: circle(200px at top right);
+      overflow-y: hidden;
+
+      .nav-link {
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+        a {
+          display: block;
+          padding: 2rem 0;
+
+          img {
+            width: 8vw;
+            filter: invert(100%) sepia(7%) saturate(7493%) hue-rotate(241deg)
+              brightness(117%) contrast(96%);
+          }
+        }
+        &__hover:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .menu-btn:checked ~ .nav-links {
+      opacity: 1;
+      clip-path: circle(100% at center);
+    }
+
+    .nav-link {
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out 1s,
+        transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .menu-btn:checked ~ .menu-icon {
+      border-radius: 50%;
+      animation: pulse 1s;
+      .menu-icon__line {
+        background: #fff;
+
+        &::before {
+          background: #fff;
+        }
+
+        &::after {
+          background: #fff;
+        }
+      }
+    }
+  }
+}

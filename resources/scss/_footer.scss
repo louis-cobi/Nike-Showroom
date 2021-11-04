@@ -1,0 +1,215 @@
+@import 'responsive';
+
+@include desk {
+    footer {
+
+        height: 500px;
+
+        & .footer__footer-nav-1 {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            border-bottom: 1px solid white;
+            padding-bottom: 58px;
+    
+            & ul {
+                list-style-type: none;
+                border-left: 1px solid white;
+                padding-left: 80px;
+    
+                & li {
+                    margin-top: 8px;
+                }
+    
+                & h3 {
+                    font-family: Lora;
+                    padding-bottom: 16px;
+                }
+
+    
+    
+            }
+    
+        }
+    }
+
+}
+
+@include ipad {
+    footer {
+        height: 500px;
+
+        & .footer__footer-nav-1 {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            border-bottom: 1px solid white;
+            padding-bottom: 58px;
+    
+            & ul {
+                list-style-type: none;
+                border-left: 1px solid white;
+                padding-left: 80px;
+    
+                & li {
+                    margin-top: 8px;
+                }
+    
+                & h3 {
+                    font-family: Lora;
+                    padding-bottom: 16px;
+                }
+
+    
+    
+            }
+    
+        }
+    }
+
+    
+}
+
+@include phone {
+    footer {
+        height: auto;
+
+        & .footer__footer-nav-1 {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            border-bottom: 1px solid white;
+            padding-bottom: 58px;
+            justify-items: center;
+    
+            & ul {
+                list-style-type: none;
+                text-align: -webkit-center;
+
+    
+                & li {
+                    margin-top: 8px;
+                }
+    
+                & h3 {
+                    font-family: Lora;
+                    padding-bottom: 16px;
+                    padding-top: 32px;
+                }
+    
+
+    
+    
+            }
+    
+        }
+    }
+
+   
+}
+
+
+
+footer {
+
+    font-family: Poppins;
+    background: $black;
+    color: white;
+    padding: 64px 10%;
+
+
+    & .footer__footer-nav-2 {
+
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid white;
+
+        & .footer-nav-2__rs {
+            display: flex;
+            text-align: -webkit-center;
+            padding-left: 32px;
+
+            & .rs__img-rs {
+                border-radius: 100%;
+                margin-right: 54px;
+                background-color: white;
+                height: 36px;
+                width: 36px;
+                padding-top: 8px;
+            }
+
+        }
+
+        & .footer-nav-2__lang {
+            padding-right: 32px;
+            text-align: end;
+            font-size: 18px;
+        }
+    }
+
+    & .footer__footer-nav-3 {
+
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        & .footer-nav-3__region {
+            padding-left: 32px;
+        }
+
+        & .footer-nav-3__copyright {
+            text-align: end;
+            padding-right: 32px;
+
+        }
+
+    }
+
+
+}
+
+footer {
+    & a {
+        color: white;
+        text-decoration: none;
+        position: relative;
+    
+    }
+    
+    & a:hover {
+        position: relative;
+    }
+    & a:hover::before {
+        content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: $gradient-opaque;
+    transform-origin: center right;
+    transform: scaleX(0) translateY(-50%);
+    transition: transform 0.3s ease;
+    }
+    
+    & a:hover:hover {
+        color: white;
+      }
+    
+      & a:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1) translateY(-50%);
+      }
+
+    }
+

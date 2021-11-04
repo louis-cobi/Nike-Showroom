@@ -1,0 +1,183 @@
+@import "colors";
+
+.small-button{
+	display: flex;
+	
+	.small-button__clickable{
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 192px;
+		height: 46px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		border: solid $black 2px;
+		text-decoration: none;
+		color: $black;
+		font-family: poppins;
+		font-size:24px;
+		z-index: 2;
+
+		&:hover{
+			margin-top: 5px;
+			margin-left: 5px;
+			transition: all .45s ease-out 0s;
+			background:$black;
+			color: #FFF;
+			background: $gradient-button;
+		}
+		&:active{
+			margin-top: 10px;
+			margin-left: 10px;
+			transition: all .10s ease-out 0s;
+			background-color: $black;
+			color: #FFF;
+			background: $gradient-button;
+		}
+
+	}
+
+	.rainbow{
+		background: $gradient-button;
+
+		&:hover{
+			margin-top: 5px;
+			margin-left: 5px;
+			transition: all .45s ease-out 0s;
+			--x: 200%;
+			color: black;
+
+		}
+		&:active{
+			margin-top: 10px;
+			margin-left: 10px;
+			transition: all .10s ease-out 0s;
+			--x: 200%;
+			color: black;
+		}
+	}
+
+
+	.small-button__shadow{
+		margin-top: 15px;
+		margin-left: 15px;
+		width: 192px;
+		height: 46px;
+		position: absolute;
+		z-index: 1;
+		background-color: white;
+		border: solid	$black 2px;
+	}
+}
+
+.big-button{
+display: flex;
+flex-direction: row;
+	.big-button__clickable{
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 350px;
+		height: 87px;
+	//   position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		border: solid $black 2px;
+		text-decoration: none;
+		color: $black;
+		font-family: poppins;
+		font-size:32px;
+		z-index: 2;
+
+		&:hover{
+			margin-top: 5px;
+			margin-left: 5px;
+			transition: all .45s ease-out 0s;
+			background:$black;
+			color: #FFF;
+
+		}
+		&:active{
+			margin-top: 10px;
+			margin-left: 10px;
+			transition: all .10s ease-out 0s;
+			background-color: $black;
+			color: #FFF;
+		}
+
+	}
+
+
+	.big-button__shadow{
+		margin-top: 15px;
+		margin-left: 15px;
+		width: 350px;
+		height: 87px;
+		position: absolute;
+		z-index: 1;
+		background-color: white;
+		border: solid	$black 2px;
+	}
+}
+
+.size-button{
+display: flex;
+width: 100%;
+	
+	.size-button__clickable{
+		margin-top: 10px;
+		margin-left: 10px;
+	//   position: absolute;
+		display: flex;
+		width: 71px;
+		height: 32px;
+		align-items: center;
+		justify-content: center;
+		background-color: $black;
+		border: solid $black 2px;
+		text-decoration: none;
+		color: #FFF;
+		font-family: poppins;
+		font-size:18px;
+		z-index: 4;
+		@include ipad{
+			width: 91px;
+			height: 52px;	
+			}
+
+		&:hover{
+			margin-top: 5px;
+			margin-left: 5px;
+			transition: all .45s ease-out 0s;
+			background:#FFF;
+			color:$black;
+
+		}
+		&:active{
+			margin-top: 10px;
+			margin-left: 10px;
+			transition: all .10s ease-out 0s;
+			background-color: #FFF;
+			color: #FFF;
+		}
+
+	}
+
+
+	.size-button__shadow{
+		margin-top: 15px;
+		margin-left: 15px;
+		width: 71px;
+		height: 32px;
+		position: absolute;
+		z-index: 1;
+		background-color: white;
+		border: solid	$black 2px;
+		@include ipad{
+			width: 91px;
+			height: 52px;
+		}
+	}
+}

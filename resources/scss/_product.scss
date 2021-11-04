@@ -1,0 +1,321 @@
+
+.product-card{
+    overflow-x: hidden;
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+        @include desk {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+
+    
+
+.first-side{
+margin-top: 5vh;
+background: #FFF;
+
+    .images{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: fit-content;
+        img{
+            position: relative;
+            width: 100vw;
+            background:center / contain no-repeat url(/resources/images/NIKE.svg), #FFF;            
+            @include ipad{
+                width:60vw;
+                margin-left: 20vw;
+                box-shadow: 0px 42px 80px 10px rgb(0 0 0 / 25%);
+            }
+            @include desk{
+                width: 40vw;
+                margin-left: 12vw;
+                margin-top: 5vh;
+                box-shadow: 0px 42px 80px 10px rgb(0 0 0 / 25%);
+
+            }
+        }
+        .dot-container {
+            position: relative;
+            text-align: center;
+            background-color: #FFF;
+            padding-bottom: 2%;
+            @include ipad {
+                width:60vw;
+                margin-left:20vw;
+            }
+            @include desk{
+                margin-left: 12vw;
+                width: 40vw;
+            }
+            
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+    }
+
+    @include desk{
+        max-width: 50vw;
+        background: $gradient-opaque;
+        height: 155vh;
+        margin-top: 14vh;
+    }
+}
+
+
+.second-side{
+    background: $gradient-opaque;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: -100px;
+        @include desk{
+            max-width: 50vw;
+            background: #FFF;
+            justify-content: left;
+            align-items: flex-start;
+            margin-top: 0;
+        }
+        
+    .product-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include desk{
+            flex-wrap:wrap;
+            align-items:flex-start;
+        
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2vh 4vw;
+            padding-bottom: 0;
+
+            .title{
+                margin-bottom: 0;
+                font-family: lora;
+                font-size: 32px;
+                padding: 1vh 1vw;
+
+            }
+            .subtitle{
+                font-family: poppins;
+                font-size:18px;
+                padding: 1vh 1vw;
+            }
+            .paragraph{
+                padding: 1vh 1vw;
+                font-family: poppins;
+                font-size: 12px;
+            }
+
+            @include ipad{
+                align-items:flex-start;
+                text-align: left;
+
+                .title{
+                    font-size: 56px;
+                }
+                .subtitle{
+                    font-family: poppins;
+                    font-size:32px
+                }
+                .paragraph{
+                    font-size: 18px;
+                }
+            
+            }
+
+            @include desk{
+                align-items:flex-start;
+                text-align: left;
+
+                .title{
+                    font-size: 56px;
+                }
+                .subtitle{
+                    font-family: poppins;
+                    font-size:32px
+                }
+                .paragraph{
+                    font-size: 18px;
+                }
+            
+            }
+    
+        
+        }
+
+        .sizes{
+            width: 50%;
+            padding-top: 2vh;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+            @include desk{
+                display: grid;
+                grid-template: 7vh 7vh / 1fr 1fr 1fr 1fr ;
+                justify-content: flex-start;
+                padding-left: 4vw;
+                }
+        }
+
+        @include ipad{
+            flex-direction: row;
+        }
+
+
+    }
+
+        
+    .buttons{
+        @include phone{
+            .small-buttons{
+                margin-right: 2vw;
+                margin-top: 5vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .big-buttons{
+                display: none;
+            }
+        }
+
+        @include ipad{
+            .big-buttons{
+                visibility: visible;
+                margin-top: 5%;
+                display: flex;
+            }
+
+            .small-buttons{
+                display: none;
+            }
+        }
+
+        @include desk{
+            padding-left: 4vw;
+            .big-buttons{
+                flex-direction: column;
+                .big-button{
+                    margin-top: 2vh;
+                }
+            }
+            .small-buttons{
+                display: none;
+            }
+        }
+    }
+
+    .details{
+        padding-top: 5%;
+        padding-bottom:10%;
+        overflow: hidden;
+
+        @include desk{
+            padding-left:4vw;
+            padding-top: 2vw;
+        }
+
+            .detail{
+                width: 100%;
+                color:$black;
+                overflow: hidden;
+            
+
+                &-label {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1em;
+                    background: rgba(0, 0, 0, 0.05);
+                    font-weight: bold;
+                    font-size: 18px;
+                    cursor: pointer;
+                    font-family: lora;
+                    @include ipad{
+                        font-size: 22px;
+                    }
+
+                    @include desk{
+                        font-size: 28px;
+                    }
+
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.15);
+                    }
+                    &::after {
+                        content: "\276F";
+                        width: 1em;
+                        height: 1em;
+                        text-align: center;
+                        transition: all .35s;
+                    }
+                }
+
+                &-content {
+                    text-align: left;
+                    max-height: 0;
+                    padding: 0 1em;
+                    color:$black;
+                    font-family: poppins;
+                    font-size: 14px;
+                    background: none;
+                    transition: all .35s;
+                    @include ipad{
+                        font-size: 18px;
+                    }
+                    @include desk{
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            input{
+                visibility: hidden;
+                &:checked {
+                    + .detail-label {
+                        background: $black;
+                        color: #FFF;
+                        &::after {
+                        transform: rotate(90deg);
+                        }
+                    }
+                    ~ .detail-content {
+                        max-height: 100vh;
+                        padding: 1em;
+                    }
+                }
+            }
+            
+        }
+
+}
+
+
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "shoes-showroom",
+  "version": "1.0.0",
+  "description": "html test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "npx sass resources/scss/main.scss:resources/css/main.css --no-source-map",
+    "scss-watch": "npx sass resources/scss/main.scss:resources/css/main.css --no-source-map -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manonlvnr/shoes-showroom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manonlvnr/shoes-showroom/issues"
+  },
+  "homepage": "https://github.com/manonlvnr/shoes-showroom#readme"
+}
